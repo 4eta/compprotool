@@ -34,3 +34,10 @@ def factorization(n):
     if n != 1:
         fact.append([n,1])
     return fact
+
+def divisor_list(n):
+    d = [[] for _ in range(n+1)]
+    for i in range(1,n+1):
+        for j in range(i,n+1,i):
+            d[j].append(i)
+    return d
